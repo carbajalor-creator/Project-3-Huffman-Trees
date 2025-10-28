@@ -3,12 +3,11 @@ Gabrela Carbajal Ortiz
 007715715
 https://github.com/carbajalor-creator/Project-3-Huffman-Trees.git
 
-Collaboration & Sources: 
-I used past labs to base my functoins and by TreeNode class off of and altered them to fit the needs of this project. I also used websites like geeksforgeeks to learn how to create a vector of tuples and the ways I can access elements in a tuple vector like get front and back. I had a lot of bugs that I couldn't figure out how to solve so I used AI to try to help I also used it to figure out what libraries I needed to include in my files.
+COLLABORATION & SOURCES
+For this project I used a lot of outside sources and websites such as geeksforgeeks to understand how to create tuple vectors, the priority queue, figuring out which instances it's better to use range based for loops instead of traditional for loops. I had a lot of errors throughout this project that I couldn't figure out how to fix so I used AI to clear some of them up or if I had trouble not understanding where my logic was wrong I used it to explain where I was going wrong.
 
-Implementation Details: 
-For part 2 of this project I implemented all of the methods in the BinSearchTree class along with adding 3 of my own functions. Most of the functions I saw were very similar to those we did in lab 6 except those took in an integer so I needed to change them to take in a tuple with a string and an integer. I added the function creatingVector that reads from the output file of Scanner.cpp and adds them to a temporary vector called tokenTuples where the tokens are stored in a tuple with their frequency count. It also keeps track of how many total tokens there are which is called later in main. The second function I created was insertPriorityQueue which takes in the tokenTuples vector but organizes them in descending order and in lexicographical order. The last function I created was getMinMaxFreq which uses the priorityQueue vector to get the maximum and minimum frequency. I also created a new class TreeNode to be able to work with the binary tree. 
+IMPLEMENTATION DETAILS:
+In the buildFromCounts function I merged the first two elements in the priority queue because it is a min heap. Once the parent node was made it was added to the tree with it's approriate word and frequency. For assigning codes functions I learned that it was more efficient to use emplace_back instead of push_back to output the word and code pairing and then I had a preorder traversal where I assigned zeros to left branches and ones to right branches. I reused the same code for writeHeaderPreorder for the preorder traversal. For the encode function I had to use multiple loops one to look for the word in the tokens vector, another to go through the codebook, and the last one to output the code from the word given. I had a variable charCount that kept count of the characters to make sure only 80 were output per line.
 
-Testing & Status: 
-My functions seem to be working correctly I tested them with the TheBells.txt. My scanner is still not working correctly so it is affecting my output for part 2. I also encountered a segmentation fault when running my project which I have not been able to figure out how to fix yet.
-
+TESTING & STATUS
+My project does not work correctly as far as I've tested it does build and run but it does not produce the output that is expected because I made mistakes early on that I didn't have time to fix in time to get the final product to work properly. Though some parts of my project do work correctly like the priority queue and the trees, the scanner doesn't work as it should.
