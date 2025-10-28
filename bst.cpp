@@ -8,7 +8,7 @@
 #include <optional>
 #include <string>
 #include <algorithm>
-#include "Scanner.hpp"
+
 
 std::pair<std::vector<std::tuple<std::string, int>>, int> BinSearchTree::creatingVector(const std::string& filename) {
 //creating a vector to create tuples of tokens and their frequency count
@@ -176,5 +176,6 @@ std::pair<int, int> BinSearchTree::getMinMaxFreq() const {
 
     return {minFreq, maxFreq};
 }
+
 
 
